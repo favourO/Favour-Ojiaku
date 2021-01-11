@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_car">
+
+    <fragment
+        android:id="@+id/nav_car"
+        android:name="com.example.favourojiaku.ui.cars.CarFragment"
+        android:label="@string/menu_car"
+        tools:layout="@layout/fragment_car" />
+
+    <fragment
+        android:id="@+id/nav_users"
+        android:name="com.example.favourojiaku.ui.users.UsersFragment"
+        android:label="@string/menu_user"
+        tools:layout="@layout/fragment_user" />
+
+</navigation>
