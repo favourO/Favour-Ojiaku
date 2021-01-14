@@ -11,7 +11,7 @@ import com.example.favourojiaku.models.Users
 interface UserDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun save(attendance: List<Users>)
+    fun save(users: List<Users>)
 
     @Query("SELECT * FROM users")
     fun fetchUser(): LiveData<List<Users>>
