@@ -9,4 +9,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorWhite">#fff</color>
     <color name="blue">#45d</color>
+
+
+    <color name="colorBody">#eceeff</color>
+    <color name="colorAccent">#03DAC5</color>
+
+
+    <color name="letterA">#2ecc71</color>
 </resources>
