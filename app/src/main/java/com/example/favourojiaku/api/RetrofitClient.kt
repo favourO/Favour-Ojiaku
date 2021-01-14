@@ -1,6 +1,7 @@
 package com.example.favourojiaku.api
 
 import android.content.Context
+import com.example.favourojiaku.api.`interface`.RetrofitInterface
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

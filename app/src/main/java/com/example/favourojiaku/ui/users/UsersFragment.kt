@@ -33,7 +33,7 @@ class UsersFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val factory = AppCenter.getViewModelFactory(activity!!.application)
+        val factory = AppCenter.getViewModelFactory(requireActivity().application)
         usersViewModel = ViewModelProvider(this, factory).get(UsersViewModel::class.java)
 
         setupRecyclerView()
@@ -55,7 +55,6 @@ class UsersFragment : Fragment() {
 
     private fun observe(viewModel: UsersViewModel){
         viewModel.users.observe(this, Observer { res ->
-            //Log.d("Attendance", "List size ${res}")
             when(res.status) {
                 Status.SUCCESS -> {
                     Log.d("AttendanceFragment", "submitSize ${res.data}")

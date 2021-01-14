@@ -10,8 +10,7 @@ data class Users (
     @SerializedName("avatar")val avatar : String,
     @SerializedName("fullName") val fullName : String,
     @SerializedName("createdAt") val createdAt : String,
-    @SerializedName("gender") val gender : String
-    /*
+    @SerializedName("gender") val gender : String/*,
     @SerializedName("colors")val colors : List<String>,
     @SerializedName("countries")val countries : List<String>*/
 )

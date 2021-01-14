@@ -14,7 +14,7 @@ class UsersViewModel(private val app: Application) : ViewModel() {
     private val repository = UsersRepository(app)
     private val querryLiveData = MutableLiveData<String>()
     private val result: LiveData<LiveData<Resource<List<Users>>>> = Transformations.map(querryLiveData){
-        repository.loadAttendance()
+        repository.loadUsers()
     }
 
     val users: LiveData<Resource<List<Users>>> = Transformations.switchMap(result){it}

@@ -1,10 +1,10 @@
 package com.example.favourojiaku.models
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
+//import androidx.room.Entity
+//import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
-@Entity
+//@Entity
 data class Cars (
         @SerializedName("id") val id: String,
         @SerializedName("first_name")val first_name : String,
@@ -19,6 +19,6 @@ data class Cars (
         @SerializedName("bio")val bio : String
 )
 {
-        @PrimaryKey(autoGenerate = true)
-        var system_id: Int = 0
+        //@PrimaryKey(autoGenerate = true)
+        //var system_id: Int = 0
 }

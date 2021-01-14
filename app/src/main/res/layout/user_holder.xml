@@ -8,29 +8,39 @@
     android:layout_marginEnd="@dimen/size_6"
     android:layout_marginStart="@dimen/size_6"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="@dimen/size_150"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/avatar"
-        android:layout_width="@dimen/size_100"
-        android:layout_height="@dimen/size_100"
+        android:layout_width="@dimen/size_80"
+        android:layout_height="@dimen/size_80"
+        android:layout_margin="@dimen/size_10"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toLeftOf="parent"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:civ_border_color="@color/ash"
+        app:civ_border_width="@dimen/size_1"/>
 
     <TextView
         android:id="@+id/fullname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/avatar"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        android:layout_margin="@dimen/size_10"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/avatar"/>
 
     <TextView
         android:id="@+id/createdAt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_10"
+        android:textColor="@color/ash"
+        android:textSize="@dimen/font_10"
         app:layout_constraintTop_toBottomOf="@id/fullname"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        app:layout_constraintLeft_toRightOf="@id/avatar"/>
 
     <TextView
         android:id="@+id/colors"
@@ -48,8 +58,14 @@
 
     <TextView
         android:id="@+id/gender"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/countries"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        android:layout_width="@dimen/size_80"
+        android:layout_height="@dimen/size_30"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_10"
+        android:textAlignment="center"
+        android:padding="@dimen/size_5"
+        android:background="@drawable/banner_gender"
+        android:layout_margin="@dimen/size_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

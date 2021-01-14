@@ -6,12 +6,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.favourojiaku.R
 import com.example.favourojiaku.models.Users
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.user_holder.view.*
 
 class UserAdapter: RecyclerView.Adapter<UserAdapter.UserHolder>() {
 
     private var _user: List<Users> = listOf()
-    val user : List<Users>
+    val users : List<Users>
         get() = _user
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.user_holder, parent, false)
@@ -36,7 +37,8 @@ class UserAdapter: RecyclerView.Adapter<UserAdapter.UserHolder>() {
             itemView.fullname.text = user.fullName
             itemView.gender.text = user.gender
             itemView.createdAt.text = user.createdAt
-            //itemView.avatar.te
+
+            Picasso.get().load(user.avatar).into(itemView.avatar)
         }
     }
 }

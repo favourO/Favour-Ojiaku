@@ -16,4 +16,5 @@
 
     <string name="menu_car">Cars</string>
     <string name="menu_user">Users</string>
+    <string name="toolbar_title">Decagon</string>
 </resources>

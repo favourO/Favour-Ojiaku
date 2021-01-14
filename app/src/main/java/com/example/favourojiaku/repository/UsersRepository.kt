@@ -19,7 +19,7 @@ class UsersRepository(app: Application) {
     private val dao = AppDb.getDb(app).userDao()
 
 
-    fun loadAttendance(): LiveData<Resource<List<Users>>>{
+    fun loadUsers(): LiveData<Resource<List<Users>>>{
         return object : DataBroker<Users>(appExecutors){
             override fun saveData(items: List<Users>) {
                 Log.d("userRepo ", "saveData() -> items size ${items.size}")
